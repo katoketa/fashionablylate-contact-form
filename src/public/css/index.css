@@ -1,0 +1,143 @@
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content__title {
+    text-align: center;
+}
+
+.content__title h2 {
+    font-weight: normal;
+}
+
+.content__item {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.contact-form {}
+
+.contact-form__inner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contact-form__row {}
+
+.contact-form__header {
+    width: 30%;
+    text-align: left;
+    font-weight: normal;
+}
+
+.contact-form__header--required::after {
+    content: " ※";
+    color: #ffb5b5;
+}
+
+.contact-form__item {
+    padding: 10px;
+}
+
+.contact-form__item-error {
+    color: #f00;
+}
+
+.contact-form__item input,
+.contact-form__item select,
+.contact-form__item textarea {
+    border: none;
+    border-radius: 3px;
+    background: #f4f4f4;
+    padding: 10px 15px;
+    height: 35px;
+}
+
+.contact-form__item-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-form__item-name input {
+    width: 45%;
+}
+
+.contact-form__item-radio {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact-form__item-radio label {
+    margin-right: 40px;
+}
+
+.contact-form__item-email input {
+    width: 100%;
+}
+
+.contact-form__item-tel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-form__item-tel input {
+    width: 30%;
+}
+
+.contact-form__item-address input {
+    width: 100%;
+}
+
+.contact-form__item-building input {
+    width: 100%;
+}
+
+.contact-form__item-category select {
+    width: 100%;
+    appearance: none;
+}
+
+.contact-form__item-category {
+    position: relative;
+    width: 50%;
+}
+
+.contact-form__item-category::after {
+    content: "";
+    position: absolute;
+    color: #82746b;
+    right: 10px;
+    top: 12px;
+    border-top: 12px solid #82746b;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 0;
+
+}
+
+.contact-form__item-detail textarea {
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+
+.contact-form__button {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form__button-submit {
+    appearance: none;
+    border: none;
+    border-radius: 3px;
+    background: #82746b;
+    padding: 7px 20px;
+    color: #fff;
+    font-size: 15px;
+    margin: 20px auto 30px;
+}
