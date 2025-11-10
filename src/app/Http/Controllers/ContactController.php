@@ -21,19 +21,30 @@ class ContactController extends Controller
         $category = Category::find($contact['category_id']);
         return view('confirm', compact('contact', 'category'));
     }
-
-    public function confirm_test()
-    {
-        $contact = Contact::find(1);
-        $category = Category::find($contact->category_id);
-        return view('confirm', compact('contact', 'category'));
-    }
-
-    public function thanks()
+    
+    public function thanks(ContactRequest $request)
     {
         $contact = $request->all();
         $tel = $contact['tel1'] . $contact['tel2'] . $contact['tel3'];
         unset($contact['tel1'], $contact['tel2'], $contact['tel3']);
         $contact += array('tel' => $tel);
+        Contact::create($contact);
+        return view('thanks');
     }
+
+    
+
+
+
+        public function confirm_test()
+        {
+            $contact = Contact::find(1);
+            $category = Category::find($contact->category_id);
+            return view('confirm', compact('contact', 'category'));
+        }
+
+        public function thanks_test()
+        {
+            return view('thanks');
+        }
 }
