@@ -21,6 +21,10 @@
     text-align: center;
 }
 
+.thanks-page__message {
+    margin-bottom: 50px;
+}
+
 .thanks-page__back-home {
     font-family: Times, "Yu Gothic", sans-serif;
     text-decoration: none;

@@ -11,7 +11,7 @@
     <main>
         <div class="thanks-page">
             <div class="thanks-page__content">
-                <h2>お問い合わせありがとうございました</h2>
+                <h2 class="thanks-page__message">お問い合わせありがとうございました</h2>
                 <a href="/" class="thanks-page__back-home">HOME</a>
             </div>
         </div>
