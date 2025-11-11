@@ -24,6 +24,10 @@ class ContactController extends Controller
     
     public function thanks(ContactRequest $request)
     {
+        if ($request->pressed_button == "back") {
+            return redirect('/')->withInput();
+        }
+
         $contact = $request->all();
         $tel = $contact['tel1'] . $contact['tel2'] . $contact['tel3'];
         unset($contact['tel1'], $contact['tel2'], $contact['tel3']);

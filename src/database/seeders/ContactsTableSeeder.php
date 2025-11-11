@@ -23,7 +23,8 @@ class ContactsTableSeeder extends Seeder
             'tel' => '08012345678',
             'address' => '東京都渋谷区千駄ヶ谷1-2-3',
             'building' => '千駄ヶ谷マンション101',
-            'detail' => '届いた商品が注文した商品ではありませんでした。\r\n商品の取り替えをお願いします。'
+            'detail' => '届いた商品が注文した商品ではありませんでした。
+商品の取り替えをお願いします。'
         ];
         for ($i = 0; $i < 20; $i++) {
             DB::table('contacts')->insert($param);

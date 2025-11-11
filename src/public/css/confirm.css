@@ -7,7 +7,7 @@
     text-align: center;
 }
 
-.content__title h2 {
+.content__title-text {
     font-weight: normal;
 }
 
@@ -16,8 +16,6 @@
     padding: 0 20px;
     margin: 0 auto;
 }
-
-.confirm {}
 
 .confirm-table {
     margin: 0 auto;
@@ -46,8 +44,8 @@
     font-size: 15px;
 }
 
-.confirm-table__item input,
-.confirm-table__item textarea {
+.confirm-table__input,
+.confirm-table__textarea {
     appearance: none;
     border: none;
     outline: none;
@@ -56,15 +54,15 @@
     font-size: 15px;
 }
 
-.confirm-table__item textarea {
+.confirm-table__textarea {
     resize: none;
 }
 
-.confirm-table__item-name input {
+.confirm-table__input-name {
     margin-right: 5px;
 }
 
-.confirm-table__item-tel input {
+.confirm-table__input-tel {
     padding: 0;
 }
 
@@ -83,6 +81,7 @@
     border-radius: 3px;
     background: #827469;
     color: #fff;
+    cursor: pointer;
 }
 
 .confirm-button__back {
@@ -91,4 +90,5 @@
     bottom: 0px;
     right: -70px;
     color: #8b7969;
+    cursor: pointer;
 }
