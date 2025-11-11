@@ -21,7 +21,7 @@ class ContactController extends Controller
         $category = Category::find($contact['category_id']);
         return view('confirm', compact('contact', 'category'));
     }
-    
+
     public function thanks(ContactRequest $request)
     {
         if ($request->pressed_button == "back") {
@@ -36,19 +36,26 @@ class ContactController extends Controller
         return view('thanks');
     }
 
-    
+    public function admin()
+    {
+        $contacts = Contact::Paginate(8);
+        $categories = Category::all();
+        return view('admin', compact('contacts', 'categories'));
+    }
 
 
 
-        public function confirm_test()
-        {
-            $contact = Contact::find(1);
-            $category = Category::find($contact->category_id);
-            return view('confirm', compact('contact', 'category'));
-        }
 
-        public function thanks_test()
-        {
-            return view('thanks');
-        }
+
+    public function confirm_test()
+    {
+        $contact = Contact::find(1);
+        $category = Category::find($contact->category_id);
+        return view('confirm', compact('contact', 'category'));
+    }
+
+    public function thanks_test()
+    {
+        return view('thanks');
+    }
 }

@@ -24,3 +24,4 @@ Route::get('/confirm', [ContactController::class, 'confirm_test']);
 Route::get('/thanks', [ContactController::class, 'thanks_test']);
 Route::get('/login', [UserController::class, 'login_test']);
 Route::get('/register', [UserController::class, 'register_test']);
+Route::get('/admin', [ContactController::class, 'admin']);
