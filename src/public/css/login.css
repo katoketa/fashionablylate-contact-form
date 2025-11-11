@@ -21,29 +21,29 @@
     width: 80%;
     max-width: 700px;
     margin: 0 auto;
-    padding: 70px 15%;
     border-radius: 5px;
     border: 1px solid #ddd;
+}
+
+.login-form__inner {
+    padding: 70px 15%;
 }
 
 .login-form__header {
     font-size: 20px;
 }
 
-.login-form__email, .login-form__password {
+.login-form__input {
     width: 100%;
     border: none;
     border-radius: 3px;
     background: #f4f4f4;
     color: #8b7969;
     padding: 15px 25px;
-}
-
-.login-form__email {
     margin-bottom: 40px;
 }
 
-.login-form__password {
+.login-form__input:last-of-type {
     margin-bottom: 70px;
 }
 

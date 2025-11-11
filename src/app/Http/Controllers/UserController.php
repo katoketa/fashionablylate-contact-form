@@ -10,4 +10,9 @@ class UserController extends Controller
     {
         return view('auth.login');
     }
+
+    public function register_test()
+    {
+        return view('auth.register');
+    }
 }
