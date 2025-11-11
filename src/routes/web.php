@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,4 @@ Route::post('/thanks', [ContactController::class, 'thanks']);
 
 Route::get('/confirm', [ContactController::class, 'confirm_test']);
 Route::get('/thanks', [ContactController::class, 'thanks_test']);
+Route::get('/login', [UserController::class, 'login_test']);
