@@ -43,6 +43,14 @@ class ContactController extends Controller
         return view('admin', compact('contacts', 'categories'));
     }
 
+    public function search(Request $request)
+    {
+        $contacts = Contact::with('category')->FirstNameSearch($request->keyword)->get();
+        $categories = Category::all();
+        return view('admin', compact('contacts', 'categories'));
+    }
+
+
 
 
 

@@ -12,9 +12,9 @@
     <div class="contacts-search">
         <form action="/search" method="get" class="search-form">
             @csrf
-            <input type="text" name="keyword" class="search__keyword" placeholder="名前やメールアドレスを入力してください">
+            <input type="text" name="keyword" class="search__keyword" placeholder="名前やメールアドレスを入力してください" value="{{ old('keyword') }}">
             <div class="search__gender">
-                <select name="gender" id="" class="search__gender-select">
+                <select name="gender" class="search__gender-select">
                     <option value="" selected hidden>性別</option>
                     <option value="1">男性</option>
                     <option value="2">女性</option>
@@ -29,7 +29,7 @@
                     @endforeach
                 </select>
             </div>
-            <input type="date" name="created_at" class="search__date" placeholder="年/月/日">
+            <input type="date" name="created_at" class="search__date" placeholder="年/月/日" value="{{ old('created_at') }}">
             <button type="submit" class="search-form__button">検索</button>
         </form>
         <form action="/reset" method="get" class="search-reset">

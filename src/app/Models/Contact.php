@@ -25,4 +25,13 @@ class Contact extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    public function scopeFirstNameSearch($query, $keyword)
+    {
+        if (isset($keyword)) {
+            $query->where('first_name', 'like', '%' . $keyword . '%');
+        }
+        return $query;
+    }
+
 }
