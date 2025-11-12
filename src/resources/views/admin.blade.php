@@ -75,8 +75,7 @@
             <td class="contacts-table__item">{{ $contact['email'] }}</td>
             <td class="contacts-table__item">{{ $contact['category']['content'] }}</td>
             <td class="contacts-table__item">
-                <dialog class="contacts-table__modal"></dialog>
-                <button class="contacts-table__open-modal" id="showDialog">詳細</button>
+                @livewire('modal')
             </td>
         </tr>
         @endforeach

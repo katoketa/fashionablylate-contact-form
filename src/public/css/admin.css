@@ -173,6 +173,10 @@ svg.w-5.h-5 {
     border-bottom: 1px solid #ebeae9;
 }
 
+.contacts-table__row:hover {
+    background: #f1e7df;
+}
+
 .contacts-table__header, .contacts-table__item {
     text-align: left;
     padding: 10px 20px;
