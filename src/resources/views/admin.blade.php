@@ -39,7 +39,7 @@
     </div>
     <div class="admin-utilities">
         <button type="submit" class="admin-export__button">エクスポート</button>
-        {{ $contacts->links() }}
+        {{ $contacts->appends(request()->query())->links() }}
     </div>
     <table class="contacts-table">
         <tr class="contacts-table__row">
