@@ -38,14 +38,14 @@ class ContactController extends Controller
 
     public function admin()
     {
-        $contacts = Contact::Paginate(8);
+        $contacts = Contact::with('category')->paginate(8);
         $categories = Category::all();
         return view('admin', compact('contacts', 'categories'));
     }
 
     public function search(Request $request)
     {
-        $contacts = Contact::with('category')->FirstNameSearch($request->keyword)->get();
+        $contacts = Contact::with('category')->KeywordSearch($request->keyword)->paginate(8);
         $categories = Category::all();
         return view('admin', compact('contacts', 'categories'));
     }

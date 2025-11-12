@@ -1,7 +1,7 @@
 .admin-page {
     width: 1000px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 0 50px 50px;
 }
 
 .admin-page__title {
@@ -119,6 +119,7 @@
     background: #edeae6;
     padding: 0 12px;
     color: #8b7969;
+    cursor: pointer;
 }
 
 .paginates {
@@ -192,4 +193,5 @@ svg.w-5.h-5 {
     border: 1px solid #f4efea;
     background: #fcfcfc;
     color: #d9c6b5;
+    cursor: pointer;
 }

@@ -26,10 +26,10 @@ class Contact extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function scopeFirstNameSearch($query, $keyword)
+    public function scopeKeywordSearch($query, $keyword)
     {
         if (isset($keyword)) {
-            $query->where('first_name', 'like', '%' . $keyword . '%');
+            $query->where('first_name', 'like', '%' . $keyword . '%')->orWhere('last_name', 'like', '%' . $keyword . '%')->orWhere('email', 'like', '%' .$keyword . '%');
         }
         return $query;
     }
