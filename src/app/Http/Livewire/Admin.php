@@ -4,13 +4,14 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class Modal extends Component
+class Admin extends Component
 {
     public $showModal = false;
+    public $contact_id = 0;
 
     public function render()
     {
-        return view('livewire.modal');
+        return view('livewire.admin');
     }
 
     public function openModal()
@@ -22,4 +23,6 @@ class Modal extends Component
     {
         $this->showModal = false;
     }
+
+
 }

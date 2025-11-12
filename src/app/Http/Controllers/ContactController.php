@@ -40,14 +40,14 @@ class ContactController extends Controller
     {
         $contacts = Contact::with('category')->paginate(8);
         $categories = Category::all();
-        return view('admin', compact('contacts', 'categories'));
+        return view('livewire.admin', compact('contacts', 'categories'));
     }
 
     public function search(Request $request)
     {
         $contacts = Contact::with('category')->KeywordSearch($request->keyword)->GenderSearch($request->gender)->CategoryIdSearch($request->category_id)->CreatedAtSearch($request->created_at)->paginate(8);
         $categories = Category::all();
-        return view('admin', compact('contacts', 'categories'));
+        return view('livewire.admin', compact('contacts', 'categories'));
     }
 
     public function reset()
