@@ -26,7 +26,7 @@ class ContactsTableSeeder extends Seeder
             'detail' => '届いた商品が注文した商品ではありませんでした。
 商品の取り替えをお願いします。'
         ];
-        for ($i = 0; $i < 20; $i++) {
+        for ($i = 0; $i < 50; $i++) {
             DB::table('contacts')->insert($param);
         }
     }
