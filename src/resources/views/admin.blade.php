@@ -23,6 +23,7 @@
                 <option value="" selected hidden>お問い合わせの種類</option>
                 @foreach ($categories as $category)
                 <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
+                @endforeach
             </select>
             <input type="date" name="created_at" class="search__date" placeholder="年/月/日">
             <button type="submit" class="search-form__button">検索</button>
