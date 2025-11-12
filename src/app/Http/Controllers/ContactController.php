@@ -21,7 +21,7 @@ class ContactController extends Controller
         $category = Category::find($contact['category_id']);
         return view('confirm', compact('contact', 'category'));
     }
-    
+
     public function thanks(ContactRequest $request)
     {
         if ($request->pressed_button == "back") {
@@ -36,19 +36,45 @@ class ContactController extends Controller
         return view('thanks');
     }
 
-    
+    public function admin()
+    {
+        $contacts = Contact::with('category')->paginate(8);
+        $categories = Category::all();
+        return view('livewire.admin', compact('contacts', 'categories'));
+    }
+
+    public function search(Request $request)
+    {
+        $contacts = Contact::with('category')->KeywordSearch($request->keyword)->GenderSearch($request->gender)->CategoryIdSearch($request->category_id)->CreatedAtSearch($request->created_at)->paginate(8);
+        $categories = Category::all();
+        return view('livewire.admin', compact('contacts', 'categories'));
+    }
+
+    public function reset()
+    {
+        return redirect('/admin');
+    }
+
+    public function destroy(Request $request)
+    {
+        Contact::find($request->id)->delete();
+        return redirect('/admin');
+    }
 
 
 
-        public function confirm_test()
-        {
-            $contact = Contact::find(1);
-            $category = Category::find($contact->category_id);
-            return view('confirm', compact('contact', 'category'));
-        }
 
-        public function thanks_test()
-        {
-            return view('thanks');
-        }
+
+
+    public function confirm_test()
+    {
+        $contact = Contact::find(1);
+        $category = Category::find($contact->category_id);
+        return view('confirm', compact('contact', 'category'));
+    }
+
+    public function thanks_test()
+    {
+        return view('thanks');
+    }
 }
